@@ -8,7 +8,7 @@ const articoli = [
 ];
 
 function App() {
-  const [newarticle, setnewarticle] = useState("")
+  const [newarticle, setnewarticole] = useState("")
   const [article, setarticle] = useState(articoli);
   
   const handlesubmit = (a) => {
@@ -26,7 +26,7 @@ function App() {
         </div>
         <div className="col-12">
           <ul className="lista-unstyled ms-0">
-            {articles.map((article, index) =>{
+            {article.map((article, index) =>{
               return <li key={index}>{article}</li>
             })}
           </ul>
@@ -36,7 +36,7 @@ function App() {
             <div className="d-flex">
              <input type="text" 
              className="form-control me-2" placeholder="aggiungi articolo"
-             value={newarticole}
+             value={newarticle}
              onChange={(a) => setnewarticole(a.target.value)}/>
              <button className="btn btn-success">aggiungi</button>
             </div>
